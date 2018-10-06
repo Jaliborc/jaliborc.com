@@ -27,7 +27,7 @@ exports.obfuscateHTML = function(out) {
       }
 
       fs.writeFileSync(filename, html.replace('</body>', pageSuffix), 'utf8')
-      console.log(figures(chalk`{green ✔} Obfuscated ${filename}`))
+      console.log(figures(chalk`{green ✔} Obfuscated ${file}`))
     }
   }
 
