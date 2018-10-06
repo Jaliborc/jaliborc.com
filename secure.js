@@ -23,7 +23,7 @@ exports.obfuscateHTML = function(out) {
         let email = entry[0]
         let id = entry[1]
 
-        html = html.replace(new RegExp(email, 'g'), `fake${id}@noscript.com`)
+        html = html.replace(/${email}/g, `fake${id}@noscript.com`)
       }
 
       fs.writeFileSync(filename, html.replace('</body>', pageSuffix), 'utf8')
