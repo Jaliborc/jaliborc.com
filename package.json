@@ -14,7 +14,7 @@
     "url": "https://github.com/jaliborc/jaliborc.com/issues"
   },
   "bin": {
-    "jaliborc.com": "cli.js"
+    "jalicom": "cli.js"
   },
   "scripts": {
     "test": "jshint cli.js | node cli"
