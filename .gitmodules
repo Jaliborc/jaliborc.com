@@ -1,0 +1,6 @@
+[submodule "node_modules/instant-helios"]
+	path = node_modules/instant-helios
+	url = https://github.com/jaliborc/instant-helios
+[submodule "node_modules/jsonresume-theme-elegant-jali"]
+	path = node_modules/jsonresume-theme-elegant-jali
+	url = https://github.com/Jaliborc/jsonresume-theme-elegant
