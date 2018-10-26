@@ -1,6 +1,6 @@
 {
   "name": "jaliborc.com",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Code for securely generating jaliborc.com with data obfuscation",
   "author": "Joao Cardoso",
   "license": "All Rights Reserved",
@@ -22,7 +22,7 @@
   "dependencies": {
     "chalk": ">=2.4.1",
     "figures": ">=2.0.0",
-    "instant-helios": ">=1.3.10",
+    "instant-helios": ">=1.3.11",
     "jsonresume-theme-elegant-jali": ">=1.0.6",
     "minimist": ">=1.2.0",
     "uglify-es": ">=3.3.9",
