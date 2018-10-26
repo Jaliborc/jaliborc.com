@@ -10,16 +10,16 @@ exports.obfuscateHTML = function(out) {
   let emails = new Map()
   let files = fs.readdirSync(out)
 
-  for (file of files) {
+  for (let file of files) {
     if (path.extname(file) == '.html') {
       let filename = path.join(out, file)
       let html = fs.readFileSync(filename, 'utf8')
 
-      for (email of html.match(emailRegex))
+      for (let email of html.match(emailRegex))
         if (!emails.has(email))
           emails.set(email, emails.size)
 
-      for (entry of emails) {
+      for (let entry of emails) {
         let email = entry[0]
         let id = entry[1]
 
@@ -35,8 +35,8 @@ exports.obfuscateHTML = function(out) {
 }
 
 exports.deployCode = function(out, data) {
-  let client = exports.readFormatted('src/client.js', data)
-  let server = exports.readFormatted('src/server.php', data)
+  let client = exports.readFormatted(`${__dirname}/src/client.js`, data)
+  let server = exports.readFormatted(`${__dirname}/src/server.php`, data)
 
   fs.writeFileSync(path.join(out, 'captcha.php'), server, 'utf8')
   console.log(figures(chalk`{green ✔} Written captcha.php`))
@@ -48,7 +48,7 @@ exports.deployCode = function(out, data) {
 exports.readFormatted = function(file, data) {
   let keys = data.json.basics.recaptcha
   let phpdata = ''
-  for (entry of data.emails) {
+  for (let entry of data.emails) {
     let email = entry[0]
     let id = entry[1]
 
